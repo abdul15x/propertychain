@@ -301,7 +301,7 @@ function App() {
 const styles = {
   container: {
     minHeight: "100vh",
-    background: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
+    background: "linear-gradient(135deg, #000000 0%, #1a1a1a 100%)",
     fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
     color: "#fff",
   },
@@ -340,9 +340,9 @@ const styles = {
     color: "#fff",
   },
   connectBtn: {
-    background: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
+    background: "linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%)",
     border: "none",
-    color: "#fff",
+    color: "#000",
     padding: "0.75rem 1.5rem",
     borderRadius: "50px",
     cursor: "pointer",
@@ -389,7 +389,7 @@ const styles = {
     marginBottom: "1.5rem",
   },
   heroGradient: {
-    background: "linear-gradient(135deg, #00ff88 0%, #00d4ff 100%)",
+    background: "linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%)",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
@@ -412,7 +412,7 @@ const styles = {
   statNumber: {
     fontSize: "2.5rem",
     fontWeight: "800",
-    color: "#00ff88",
+    color: "#ffffff",
     marginBottom: "0.5rem",
   },
   statLabel: {
@@ -525,7 +525,7 @@ const styles = {
   },
   primaryBtn: {
     width: "100%",
-    background: "linear-gradient(135deg, #00ff88 0%, #00d4ff 100%)",
+    background: "linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%)",
     border: "none",
     color: "#000",
     padding: "0.875rem",
@@ -546,7 +546,7 @@ const styles = {
     fontSize: "1.125rem",
     fontWeight: "600",
     marginBottom: "1rem",
-    color: "#00ff88",
+    color: "#ffffff",
   },
   propertyDetail: {
     display: "flex",
