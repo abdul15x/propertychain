@@ -312,16 +312,18 @@ const styles = {
     top: 0,
     left: 0,
     right: 0,
-    background: "rgba(255, 255, 255, 0.9)",
-    backdropFilter: "blur(10px)",
+    background: "rgba(255, 255, 255, 0.95)",
+    backdropFilter: "blur(20px)",
     borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
     zIndex: 1000,
     padding: "1rem 0",
+    transition: "all 0.3s ease",
+    animation: "slideDown 0.8s ease-out",
   },
   nav: {
     maxWidth: "1200px",
     margin: "0 auto",
-    padding: "0 2rem",
+    padding: "0 1rem",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -330,9 +332,11 @@ const styles = {
     display: "flex",
     alignItems: "center",
     gap: "0.5rem",
+    animation: "fadeInLeft 1s ease-out",
   },
   logoIcon: {
     fontSize: "1.5rem",
+    animation: "bounce 2s infinite",
   },
   logoText: {
     fontSize: "1.25rem",
@@ -349,6 +353,9 @@ const styles = {
     fontWeight: "600",
     fontSize: "0.875rem",
     transition: "all 0.3s ease",
+    animation: "fadeInRight 1s ease-out",
+    transform: "translateY(0)",
+    boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
   },
   walletInfo: {
     display: "flex",
@@ -357,12 +364,15 @@ const styles = {
     background: "rgba(0, 0, 0, 0.1)",
     padding: "0.5rem 1rem",
     borderRadius: "50px",
+    animation: "fadeInRight 1s ease-out",
+    transition: "all 0.3s ease",
   },
   connectedDot: {
     width: "8px",
     height: "8px",
     borderRadius: "50%",
     background: "#00ff88",
+    animation: "pulse 2s infinite",
   },
   walletAddress: {
     fontSize: "0.875rem",
@@ -376,29 +386,33 @@ const styles = {
     textAlign: "center",
     maxWidth: "1200px",
     margin: "0 auto",
-    padding: "120px 2rem 80px",
+    padding: "120px 1rem 80px",
   },
   heroContent: {
     maxWidth: "800px",
     margin: "0 auto",
+    animation: "fadeInUp 1.2s ease-out",
   },
   heroTitle: {
-    fontSize: "3.5rem",
+    fontSize: "clamp(2rem, 8vw, 3.5rem)",
     fontWeight: "800",
     lineHeight: "1.1",
     marginBottom: "1.5rem",
+    animation: "slideInFromBottom 1s ease-out 0.3s both",
   },
   heroGradient: {
     background: "linear-gradient(135deg, #000000 0%, #1a1a1a 100%)",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
+    animation: "glow 3s ease-in-out infinite alternate",
   },
   heroSubtitle: {
-    fontSize: "1.25rem",
+    fontSize: "clamp(1rem, 3vw, 1.25rem)",
     opacity: 0.9,
     marginBottom: "3rem",
     lineHeight: "1.6",
+    animation: "slideInFromBottom 1s ease-out 0.6s both",
   },
   heroStats: {
     display: "grid",
@@ -408,12 +422,15 @@ const styles = {
   },
   statItem: {
     textAlign: "center",
+    animation: "scaleIn 0.8s ease-out",
+    transition: "transform 0.3s ease",
   },
   statNumber: {
-    fontSize: "2.5rem",
+    fontSize: "clamp(1.8rem, 5vw, 2.5rem)",
     fontWeight: "800",
     color: "#000000",
     marginBottom: "0.5rem",
+    animation: "countUp 2s ease-out",
   },
   statLabel: {
     fontSize: "0.875rem",
@@ -422,13 +439,13 @@ const styles = {
 
   // Features Styles
   features: {
-    padding: "4rem 2rem",
+    padding: "4rem 1rem",
     maxWidth: "1200px",
     margin: "0 auto",
   },
   featuresGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
     gap: "2rem",
   },
   featureCard: {
@@ -438,24 +455,31 @@ const styles = {
     padding: "2rem",
     textAlign: "center",
     border: "1px solid rgba(0, 0, 0, 0.1)",
+    transition: "all 0.4s ease",
+    cursor: "pointer",
+    animation: "slideInFromBottom 0.8s ease-out",
+    transform: "translateY(0)",
   },
   featureIcon: {
     fontSize: "3rem",
     marginBottom: "1rem",
+    transition: "transform 0.3s ease",
   },
   featureTitle: {
     fontSize: "1.25rem",
     fontWeight: "600",
     marginBottom: "1rem",
+    transition: "color 0.3s ease",
   },
   featureDesc: {
     opacity: 0.9,
     lineHeight: "1.6",
+    transition: "opacity 0.3s ease",
   },
 
   // Dashboard Styles
   dashboard: {
-    padding: "4rem 2rem",
+    padding: "4rem 1rem",
     maxWidth: "800px",
     margin: "0 auto",
   },
@@ -465,14 +489,18 @@ const styles = {
     borderRadius: "20px",
     overflow: "hidden",
     border: "1px solid rgba(0, 0, 0, 0.1)",
+    transition: "all 0.3s ease",
+    animation: "zoomIn 0.8s ease-out",
+    boxShadow: "0 10px 40px rgba(0, 0, 0, 0.1)",
   },
   tabNav: {
     display: "flex",
     background: "rgba(0, 0, 0, 0.05)",
+    flexWrap: "wrap",
   },
   tab: {
     flex: 1,
-    padding: "1rem",
+    padding: "1rem 0.5rem",
     background: "transparent",
     border: "none",
     color: "rgba(0, 0, 0, 0.7)",
@@ -480,13 +508,18 @@ const styles = {
     fontSize: "0.875rem",
     fontWeight: "500",
     transition: "all 0.3s ease",
+    minWidth: "120px",
+    position: "relative",
+    overflow: "hidden",
   },
   activeTab: {
     color: "#000",
     background: "rgba(0, 0, 0, 0.1)",
+    transform: "translateY(-2px)",
   },
   tabContent: {
     padding: "2rem",
+    animation: "fadeIn 0.5s ease-out",
   },
   formContainer: {
     maxWidth: "400px",
@@ -497,21 +530,25 @@ const styles = {
     fontWeight: "600",
     marginBottom: "0.5rem",
     textAlign: "center",
+    animation: "slideInFromTop 0.6s ease-out",
   },
   formSubtitle: {
     opacity: 0.8,
     textAlign: "center",
     marginBottom: "2rem",
     fontSize: "0.875rem",
+    animation: "slideInFromTop 0.6s ease-out 0.1s both",
   },
   inputGroup: {
     marginBottom: "1.5rem",
+    animation: "slideInFromLeft 0.6s ease-out",
   },
   label: {
     display: "block",
     marginBottom: "0.5rem",
     fontSize: "0.875rem",
     fontWeight: "500",
+    transition: "color 0.3s ease",
   },
   input: {
     width: "100%",
@@ -522,6 +559,8 @@ const styles = {
     color: "#000",
     fontSize: "0.875rem",
     boxSizing: "border-box",
+    transition: "all 0.3s ease",
+    outline: "none",
   },
   primaryBtn: {
     width: "100%",
@@ -534,6 +573,9 @@ const styles = {
     fontWeight: "600",
     fontSize: "0.875rem",
     transition: "all 0.3s ease",
+    animation: "slideInFromBottom 0.6s ease-out",
+    transform: "translateY(0)",
+    boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
   },
   propertyCard: {
     marginTop: "2rem",
@@ -541,6 +583,8 @@ const styles = {
     borderRadius: "12px",
     padding: "1.5rem",
     border: "1px solid rgba(0, 0, 0, 0.1)",
+    animation: "slideInFromBottom 0.6s ease-out",
+    transition: "all 0.3s ease",
   },
   propertyCardTitle: {
     fontSize: "1.125rem",
@@ -554,6 +598,9 @@ const styles = {
     marginBottom: "0.75rem",
     paddingBottom: "0.75rem",
     borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
+    animation: "fadeIn 0.8s ease-out",
+    flexWrap: "wrap",
+    gap: "0.5rem",
   },
   propertyLabel: {
     fontWeight: "500",
@@ -567,9 +614,10 @@ const styles = {
   // Footer Styles
   footer: {
     background: "rgba(0, 0, 0, 0.05)",
-    padding: "2rem",
+    padding: "2rem 1rem",
     textAlign: "center",
     borderTop: "1px solid rgba(0, 0, 0, 0.1)",
+    animation: "fadeIn 1s ease-out",
   },
   footerContent: {
     maxWidth: "1200px",
@@ -587,5 +635,154 @@ const styles = {
     fontSize: "0.875rem",
   },
 };
+
+// Add CSS animations
+const styleSheet = document.createElement("style");
+styleSheet.type = "text/css";
+styleSheet.innerText = `
+  @keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes fadeInLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  @keyframes fadeInRight {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes slideInFromBottom {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes slideInFromTop {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes slideInFromLeft {
+    from { transform: translateX(-30px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  @keyframes scaleIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  @keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes glow {
+    from { filter: brightness(1) drop-shadow(0 0 5px rgba(0, 0, 0, 0.3)); }
+    to { filter: brightness(1.1) drop-shadow(0 0 20px rgba(0, 0, 0, 0.5)); }
+  }
+  
+  @keyframes countUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Hover effects */
+  button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+  }
+  
+  .feature-card:hover .feature-icon {
+    transform: scale(1.2) !important;
+  }
+  
+  input:focus {
+    border-color: #000 !important;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-2px) !important;
+  }
+  
+  .tab:hover {
+    background: rgba(0, 0, 0, 0.08) !important;
+    transform: translateY(-2px) !important;
+  }
+  
+  .wallet-info:hover {
+    background: rgba(0, 0, 0, 0.15) !important;
+    transform: scale(1.05) !important;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem !important;
+    }
+    
+    .features-grid {
+      grid-template-columns: 1fr !important;
+    }
+    
+    .tab-nav {
+      flex-direction: column !important;
+    }
+    
+    .tab {
+      min-width: 100% !important;
+    }
+    
+    .hero-stats {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
+      gap: 1rem !important;
+    }
+    
+    .property-detail {
+      flex-direction: column !important;
+      gap: 0.25rem !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .nav {
+      flex-direction: column !important;
+      gap: 1rem !important;
+    }
+    
+    .hero {
+      padding-top: 140px !important;
+    }
+  }
+`;
+document.head.appendChild(styleSheet);
 
 export default App;
