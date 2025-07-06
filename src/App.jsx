@@ -36,17 +36,23 @@ function App() {
       return null;
     }
 
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const provider = new ethers.BrowserProvider(window.ethereum);
     const signer = provider.getSigner();
     return new ethers.Contract(CONTRACT_ADDRESS, contractABI, signer);
   };
 
   // Register Property
   const registerProperty = async () => {
-    const contract = getContract();
-    if (!contract) return;
+    if (!window.ethereum) {
+      alert("MetaMask not found");
+      return;
+    }
 
     try {
+      const provider = new ethers.BrowserProvider(window.ethereum);
+      const signer = await provider.getSigner();
+      const contract = new ethers.Contract(CONTRACT_ADDRESS, contractABI, signer);
+      
       const tx = await contract.registerProperty(location, parseInt(area));
       alert("⏳ Transaction sent. Waiting for confirmation...");
       await tx.wait();
@@ -59,10 +65,16 @@ function App() {
 
   // Transfer Property
   const transferProperty = async () => {
-    const contract = getContract();
-    if (!contract) return;
+    if (!window.ethereum) {
+      alert("MetaMask not found");
+      return;
+    }
 
     try {
+      const provider = new ethers.BrowserProvider(window.ethereum);
+      const signer = await provider.getSigner();
+      const contract = new ethers.Contract(CONTRACT_ADDRESS, contractABI, signer);
+      
       const tx = await contract.transferProperty(
         parseInt(propertyId),
         newOwner,
@@ -78,10 +90,16 @@ function App() {
 
   // View Property Details
   const viewProperty = async () => {
-    const contract = getContract();
-    if (!contract) return;
+    if (!window.ethereum) {
+      alert("MetaMask not found");
+      return;
+    }
 
     try {
+      const provider = new ethers.BrowserProvider(window.ethereum);
+      const signer = await provider.getSigner();
+      const contract = new ethers.Contract(CONTRACT_ADDRESS, contractABI, signer);
+      
       const data = await contract.getProperty(parseInt(propertyId));
       setPropertyDetails(data);
     } catch (error) {
