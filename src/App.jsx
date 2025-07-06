@@ -301,7 +301,7 @@ function App() {
 const styles = {
   container: {
     minHeight: "100vh",
-    background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    background: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
     fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
     color: "#fff",
   },
@@ -340,7 +340,7 @@ const styles = {
     color: "#fff",
   },
   connectBtn: {
-    background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    background: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
     border: "none",
     color: "#fff",
     padding: "0.75rem 1.5rem",
