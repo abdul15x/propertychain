@@ -301,9 +301,9 @@ function App() {
 const styles = {
   container: {
     minHeight: "100vh",
-    background: "linear-gradient(135deg, #000000 0%, #1a1a1a 100%)",
+    background: "linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)",
     fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-    color: "#fff",
+    color: "#000",
   },
   
   // Header Styles
@@ -312,9 +312,9 @@ const styles = {
     top: 0,
     left: 0,
     right: 0,
-    background: "rgba(0, 0, 0, 0.1)",
+    background: "rgba(255, 255, 255, 0.9)",
     backdropFilter: "blur(10px)",
-    borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+    borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
     zIndex: 1000,
     padding: "1rem 0",
   },
@@ -337,12 +337,12 @@ const styles = {
   logoText: {
     fontSize: "1.25rem",
     fontWeight: "700",
-    color: "#fff",
+    color: "#000",
   },
   connectBtn: {
-    background: "linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%)",
+    background: "linear-gradient(135deg, #000000 0%, #1a1a1a 100%)",
     border: "none",
-    color: "#000",
+    color: "#fff",
     padding: "0.75rem 1.5rem",
     borderRadius: "50px",
     cursor: "pointer",
@@ -354,7 +354,7 @@ const styles = {
     display: "flex",
     alignItems: "center",
     gap: "0.5rem",
-    background: "rgba(255, 255, 255, 0.1)",
+    background: "rgba(0, 0, 0, 0.1)",
     padding: "0.5rem 1rem",
     borderRadius: "50px",
   },
@@ -389,7 +389,7 @@ const styles = {
     marginBottom: "1.5rem",
   },
   heroGradient: {
-    background: "linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%)",
+    background: "linear-gradient(135deg, #000000 0%, #1a1a1a 100%)",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
@@ -412,7 +412,7 @@ const styles = {
   statNumber: {
     fontSize: "2.5rem",
     fontWeight: "800",
-    color: "#ffffff",
+    color: "#000000",
     marginBottom: "0.5rem",
   },
   statLabel: {
@@ -432,12 +432,12 @@ const styles = {
     gap: "2rem",
   },
   featureCard: {
-    background: "rgba(255, 255, 255, 0.1)",
+    background: "rgba(0, 0, 0, 0.05)",
     backdropFilter: "blur(10px)",
     borderRadius: "16px",
     padding: "2rem",
     textAlign: "center",
-    border: "1px solid rgba(255, 255, 255, 0.1)",
+    border: "1px solid rgba(0, 0, 0, 0.1)",
   },
   featureIcon: {
     fontSize: "3rem",
@@ -460,30 +460,30 @@ const styles = {
     margin: "0 auto",
   },
   dashboardContainer: {
-    background: "rgba(255, 255, 255, 0.1)",
+    background: "rgba(0, 0, 0, 0.05)",
     backdropFilter: "blur(10px)",
     borderRadius: "20px",
     overflow: "hidden",
-    border: "1px solid rgba(255, 255, 255, 0.1)",
+    border: "1px solid rgba(0, 0, 0, 0.1)",
   },
   tabNav: {
     display: "flex",
-    background: "rgba(0, 0, 0, 0.1)",
+    background: "rgba(0, 0, 0, 0.05)",
   },
   tab: {
     flex: 1,
     padding: "1rem",
     background: "transparent",
     border: "none",
-    color: "rgba(255, 255, 255, 0.7)",
+    color: "rgba(0, 0, 0, 0.7)",
     cursor: "pointer",
     fontSize: "0.875rem",
     fontWeight: "500",
     transition: "all 0.3s ease",
   },
   activeTab: {
-    color: "#fff",
-    background: "rgba(255, 255, 255, 0.1)",
+    color: "#000",
+    background: "rgba(0, 0, 0, 0.1)",
   },
   tabContent: {
     padding: "2rem",
@@ -517,17 +517,17 @@ const styles = {
     width: "100%",
     padding: "0.75rem",
     borderRadius: "8px",
-    border: "1px solid rgba(255, 255, 255, 0.2)",
-    background: "rgba(255, 255, 255, 0.1)",
-    color: "#fff",
+    border: "1px solid rgba(0, 0, 0, 0.2)",
+    background: "rgba(0, 0, 0, 0.05)",
+    color: "#000",
     fontSize: "0.875rem",
     boxSizing: "border-box",
   },
   primaryBtn: {
     width: "100%",
-    background: "linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%)",
+    background: "linear-gradient(135deg, #000000 0%, #1a1a1a 100%)",
     border: "none",
-    color: "#000",
+    color: "#fff",
     padding: "0.875rem",
     borderRadius: "8px",
     cursor: "pointer",
@@ -537,23 +537,23 @@ const styles = {
   },
   propertyCard: {
     marginTop: "2rem",
-    background: "rgba(255, 255, 255, 0.05)",
+    background: "rgba(0, 0, 0, 0.05)",
     borderRadius: "12px",
     padding: "1.5rem",
-    border: "1px solid rgba(255, 255, 255, 0.1)",
+    border: "1px solid rgba(0, 0, 0, 0.1)",
   },
   propertyCardTitle: {
     fontSize: "1.125rem",
     fontWeight: "600",
     marginBottom: "1rem",
-    color: "#ffffff",
+    color: "#000000",
   },
   propertyDetail: {
     display: "flex",
     justifyContent: "space-between",
     marginBottom: "0.75rem",
     paddingBottom: "0.75rem",
-    borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+    borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
   },
   propertyLabel: {
     fontWeight: "500",
@@ -566,10 +566,10 @@ const styles = {
 
   // Footer Styles
   footer: {
-    background: "rgba(0, 0, 0, 0.2)",
+    background: "rgba(0, 0, 0, 0.05)",
     padding: "2rem",
     textAlign: "center",
-    borderTop: "1px solid rgba(255, 255, 255, 0.1)",
+    borderTop: "1px solid rgba(0, 0, 0, 0.1)",
   },
   footerContent: {
     maxWidth: "1200px",
